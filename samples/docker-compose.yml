@@ -1,0 +1,23 @@
+alexa-service:
+  image: alexa-service
+  ports:
+    - 3000:3000
+
+alexa-client:
+  image: alexa-client
+  links:
+    - alexa-service
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+  devices:
+    - /dev/snd:/dev/snd
+  environment:
+    - DISPLAY=:1.0
+
+alexa-wwa:
+  image: alexa-wwa
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+  devices:
+    - /dev/snd:/dev/snd
+  net: container:samples_alexa-client_1

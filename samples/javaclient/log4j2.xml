@@ -17,7 +17,7 @@
         <Logger name="com.amazon.alexa.avs.http.jetty.InputStreamResponseListener" level="info" additivity="false" />
         <Root level="debug">
             <AppenderRef ref="file" level="DEBUG"/>
-            <AppenderRef ref="stdout" level="ERROR"/>
+            <AppenderRef ref="stdout" level="DEBUG"/>
         </Root>
     </Loggers>
 </Configuration>

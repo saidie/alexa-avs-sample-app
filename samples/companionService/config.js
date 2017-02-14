@@ -14,18 +14,18 @@
  * not need to modify those elements.
  */
 var config = {
-    clientId: '',
-    clientSecret: '',
-    redirectUrl: 'https://localhost:3000/authresponse',
-    lwaRedirectHost: 'amazon.com',
-    lwaApiHost: 'api.amazon.com',
-    validateCertChain: true,
-    sslKey: '',
-    sslCert: '',
-    sslCaCert: '',
-    products: {
-        "": [""], // Fill in with valid device values, eg: "testdevice1": ["DSN1234", "DSN5678"]
-    },
+  clientId: '$CLIENT_ID',
+  clientSecret: '$CLIENT_SECRET',
+  redirectUrl: 'https://$HOSTNAME:$PORT/authresponse',
+  lwaRedirectHost: 'amazon.com',
+  lwaApiHost: 'api.amazon.com',
+  validateCertChain: true,
+  sslKey: '/data/certs/server.key',
+  sslCert: '/data/certs/server.crt',
+  sslCaCert: '/data/certs/ca.crt',
+  products: {
+    "$PRODUCT_ID": ["$SERIAL"],
+  },
 };
 
 module.exports = config;

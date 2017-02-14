@@ -5,7 +5,6 @@
   <groupId>com.amazon.alexa.avs</groupId>
   <artifactId>sample-java-client</artifactId>
   <version>20160207.2</version>
-  <packaging>jar</packaging>
   <name>Alexa Voice Service Sample Java Client</name>
   <url>https://developer.amazon.com/appsandservices/solutions/alexa/alexa-voice-service</url>
 
@@ -14,9 +13,9 @@
     <!-- The latest version of alpn-boot that supports JDK 1.8.0_71 through 1.8.0_74 -->
     <!-- To override, pass -Dalpn-boot.version=YOUR_VERSION when running "mvn install" and "mvn exec:exec" -->
     <!-- Your version can be determined here: http://www.eclipse.org/jetty/documentation/current/alpn-chapter.html#alpn-versions -->
-    <alpn-boot.version>8.1.7.v20160121</alpn-boot.version>
+    <alpn-boot.version>8.1.11.v20170118</alpn-boot.version>
     <slf4j.version>1.7.10</slf4j.version>
-    <log4j.version>2.3</log4j.version>
+    <log4j.version>2.8</log4j.version>
   </properties>
   <dependencies>
     <dependency>
@@ -144,6 +143,12 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna</artifactId>
+      <version>4.1.0</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
   <build>

@@ -1,19 +1,19 @@
 {
-    "productId":"",
-    "dsn":"",
-    "provisioningMethod":"",
-    "wakeWordAgentEnabled":false,
+    "productId":"$PRODUCT_ID",
+    "dsn":"$SERIAL",
+    "provisioningMethod":"companionService",
+    "wakeWordAgentEnabled":true,
     "locale":"en-US",
     "companionApp":{
         "localPort":8443,
-        "sslKeyStore":"",
+        "sslKeyStore":"/data/certs/jetty.pkcs12",
         "sslKeyStorePassphrase":"",
         "lwaUrl":"https://api.amazon.com"
     },
     "companionService":{
-        "serviceUrl":"https://localhost:3000",
-        "sslClientKeyStore":"",
+        "serviceUrl":"https://$HOSTNAME:$PORT",
+        "sslClientKeyStore":"/data/certs/client.pkcs12",
         "sslClientKeyStorePassphrase":"",
-        "sslCaCert":""
+        "sslCaCert":"/data/certs/ca.crt"
     }
 }
